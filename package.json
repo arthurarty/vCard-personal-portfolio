@@ -1,8 +1,21 @@
 {
   "devDependencies": {
-    "jshint": "^2.13.6"
+    "jshint": "^2.13.6",
+    "lint-staged": "^15.2.0",
+    "prettier": "3.1.1"
   },
   "scripts": {
     "lint": "jshint ."
+  },
+  "lint-staged": {
+    "*.js": [
+      "jshint"
+    ],
+    "*.css": [
+      "prettier --write"
+    ],
+    "*.html": [
+      "prettier --write"
+    ]
   }
 }
